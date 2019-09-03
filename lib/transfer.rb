@@ -14,7 +14,7 @@ require 'pry'
  def valid?
    @sender.valid? && @receiver.valid? ? true : false
  end
-
+binding.pry
   def execute_transaction
     if @sender.balance > @amount && @status == "pending"
       @sender.balance -= @amount
